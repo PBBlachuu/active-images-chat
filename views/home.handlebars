@@ -14,33 +14,51 @@
     </div>
 </form>
 
-<form id="chat-form" action="#">
-    <div id="chat-window" class="chat-window">
-        {{!-- <div class="chat-line">
-            <div class="chat-line-time">12:33</div>
-            <div class="chat-line-nick">Maciek</div>
-            <div class="chat-line-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, magnam.</div>
+<div id="chat-container">
+    <div>
+        <form id="chat-form" action="#">
+            <div id="chat-window" class="chat-window">
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" rows="7" class="form-control" placeholder="Twoja wiadomość..."></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary pull-xs-right">Wyślij</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <ul class="nav nav-tabs">
+          <li data-remote="2d" id="choose-2d"><a href="#">2D</a></li>
+          <li data-remote="3d" id="choose-3d"><a href="#">3D</a></li>
+        </ul>
+
+        <div class="2d-3d-container">
+            <div class="2d">
+                <div id="drag-2d"></div>
+
+                <button class="btn btn-primary btn-xs pull-xs-right" id="down"><i class="fas fa-chevron-down"></i></button>
+                <button class="btn btn-primary btn-xs pull-xs-right" id="up"><i class="fas fa-chevron-up"></i></button>
+                <button class="btn btn-primary btn-xs pull-xs-right" id="right"><i class="fas fa-chevron-right"></i></button>
+                <button class="btn btn-primary btn-xs pull-xs-right" id="left"><i class="fas fa-chevron-left"></i></button>
+                
+                
+                
+            </div>
+
+            <div class="3d">
+                <div id="drag-3d">
+                    <img src="images/3d/1.jpg">
+                </div>
+                <input id="rotate-3d" type="range" min="1" max="29">
+            </div>
         </div>
 
-        <div class="chat-line">
-            <div class="chat-line-time">12:34</div>
-            <div class="chat-line-nick">Tomek</div>
-            <div class="chat-line-message">Lorem ipsum dolor sit amet.</div>
-        </div>
+    </div>
+</div>
 
-        <div class="chat-line">
-            <div class="chat-line-time">12:34</div>
-            <div class="chat-line-status">Tomek opuścił czat.</div>
-        </div> --}}
-    </div>
-
-    <div class="form-group">
-        <textarea id="message" rows="7" class="form-control" placeholder="Twoja wiadomość..."></textarea>
-    </div>
-    <div class="form-group">
-        <button class="btn btn-primary pull-xs-right">Wyślij</button>
-    </div>
-</form>
 
 <script id="chat-status-template" type="text/x-handlebars-template">
 <div class="chat-line">

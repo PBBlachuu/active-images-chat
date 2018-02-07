@@ -14,13 +14,14 @@ app.use( express.static("public") );
 app.get("/", function(req, res) {
 
     res.render("home", {
-        title: "Czat grupowy",
+        title: "Active images chat",
         styles: [
             "bootstrap.css",
             "custom.css"
         ],
         scripts: [
             "jquery.js",
+            "jquery-drag.js",
             "handlebars.js",
             "socket.io.js",
             "chat.js"
@@ -30,9 +31,7 @@ app.get("/", function(req, res) {
 });
 
 server.listen(8080, function() {
-
     console.log("Serwer został uruchomiony pod adresem http://localhost:8080");
-
 });
 
 chat(io);
